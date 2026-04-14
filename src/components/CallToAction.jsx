@@ -86,7 +86,7 @@ Boleh minta info lebih lanjut? Terima kasih 🙏`;
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <a
-                        href="#pricing"
+                        href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
                         className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-primary bg-white hover:bg-gray-50 shadow-xl transition-all hover:scale-105 duration-200"
                     >
                         Mulai Website Anda Sekarang

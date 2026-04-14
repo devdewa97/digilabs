@@ -33,9 +33,17 @@ const Hero = () => {
                                 Pesan Sekarang
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </a>
-                            <a href="#portfolio" className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:ring-gray-100">
+                            <button
+                                onClick={() => {
+                                    const element = document.getElementById('portfolio');
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-gray-700 bg-white border border-gray-200 hover:border-gray-300 hover:bg-gray-50 shadow-sm transition-all focus:ring-2 focus:ring-offset-2 focus:ring-gray-100"
+                            >
                                 Lihat Portofolio
-                            </a>
+                            </button>
                         </div>
 
                         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 font-medium">

@@ -35,11 +35,11 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-lg font-bold mb-6">Layanan</h4>
                         <ul className="space-y-3">
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Company Profile</a></li>
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Landing Page</a></li>
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Toko Online</a></li>
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Redesign Website</a></li>
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Maintenance & SEO</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Company Profile</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Landing Page</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Toko Online</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Redesign Website</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Maintenance & SEO</a></li>
                         </ul>
                     </div>
 
@@ -47,9 +47,9 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-lg font-bold mb-6">Perusahaan</h4>
                         <ul className="space-y-3">
-                            <li><a href="#home" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Beranda</a></li>
-                            <li><a href="#pricing" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Harga Paket</a></li>
-                            <li><a href="#portfolio" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Portofolio</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Beranda</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Harga Paket</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Portofolio</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Tentang Kami</a></li>
                             <li><a href="#" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Kebijakan Privasi</a></li>
                         </ul>
