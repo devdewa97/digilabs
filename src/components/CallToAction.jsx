@@ -49,8 +49,15 @@ Boleh minta info lebih lanjut? Terima kasih 🙏`;
         if (e.target === modalRef.current) closeModal();
     };
 
+    const scrollToPricing = () => {
+        const element = document.getElementById('pricing');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <section className="relative py-24 overflow-hidden">
+        <section id="contact" className="relative py-24 overflow-hidden">
             {/* Background with modern gradient */}
             <div className="absolute inset-0 bg-primary">
                 <div className="absolute inset-0 bg-linear-to-r from-blue-700 to-blue-500 opacity-90"></div>
@@ -85,13 +92,13 @@ Boleh minta info lebih lanjut? Terima kasih 🙏`;
                     Jangan biarkan kompetitor selangkah lebih maju. Dapatkan website profesional sekarang dan jangkau lebih banyak pelanggan.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <a
-                        href="#pricing"
+                    <button
+                        onClick={scrollToPricing}
                         className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-primary bg-white hover:bg-gray-50 shadow-xl transition-all hover:scale-105 duration-200"
                     >
                         Mulai Website Anda Sekarang
                         <ArrowRight className="ml-2 h-6 w-6" />
-                    </a>
+                    </button>
                     <a
                         href="https://wa.me/6281324887391?text=Halo+kak+%F0%9F%99%8B+saya+ingin+konsultasi+gratis+untuk+pembuatan+website.+Bisa+bantu+jawab+beberapa+pertanyaan+saya+ya%3F+Terima+kasih+%F0%9F%99%80"
                         target="_blank"

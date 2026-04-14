@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Portfolio = () => {
@@ -46,6 +46,27 @@ const Portfolio = () => {
             category: 'UMKM',
             description: 'Website restoran dengan menu digital dan sistem reservasi meja online.',
             image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+        },
+        {
+            id: 'travel-eksplorasi',
+            title: 'Travel Eksplorasi',
+            category: 'Company Profile',
+            description: 'Website agensi perjalanan dengan sistem pemesanan paket wisata dan blog travel.',
+            image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
+        },
+        {
+            id: 'boutique-fashion-hijab',
+            title: 'Boutique Fashion Hijab',
+            category: 'E-Commerce',
+            description: 'Toko online fashion hijab dengan sistem inventori dan pembayaran yang lengkap.',
+            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+        },
+        {
+            id: 'startup-digital-agency',
+            title: 'Startup Digital Agency',
+            category: 'Landing Page',
+            description: 'Landing page profesional untuk agensi digital dengan fitur portfolio dan pricing.',
+            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
         },
     ];
 
@@ -112,9 +133,12 @@ const Portfolio = () => {
                 </div>
 
                 <div className="text-center mt-12">
-                    <button className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                    <Link
+                        to="/karya-terbaik-kami"
+                        className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors"
+                    >
                         Lihat Semua Portofolio
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

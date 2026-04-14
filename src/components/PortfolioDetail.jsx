@@ -119,6 +119,60 @@ const PortfolioDetail = () => {
             year: '2024',
             url: 'https://sedapmantap.id',
             status: 'Aktif'
+        },
+        {
+            id: 'travel-eksplorasi',
+            title: 'Travel Eksplorasi',
+            category: 'Company Profile',
+            description: 'Website agensi perjalanan dengan sistem pemesanan paket wisata dan blog travel.',
+            fullDescription: 'Platform komprehensif untuk agensi perjalanan Travel Eksplorasi. Dilengkapi dengan sistem pemesanan paket wisata online, blog travel informatif, dan galeri foto destinasi.',
+            image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80',
+            screenshots: [
+                'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80',
+                'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&q=80',
+                'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80'
+            ],
+            features: ['Paket Wifi', 'Blog Travel', 'Galeri Destinasi', 'Sistem Pemesanan', 'Responsive Design'],
+            client: 'Travel Eksplorasi',
+            year: '2024',
+            url: 'https://travel-eksplorasi.com',
+            status: 'Aktif'
+        },
+        {
+            id: 'boutique-fashion-hijab',
+            title: 'Boutique Fashion Hijab',
+            category: 'E-Commerce',
+            description: 'Toko online fashion hijab dengan sistem inventori dan pembayaran yang lengkap.',
+            fullDescription: 'Platform e-commerce profesional untuk Boutique Fashion Hijab. Dilengkapi dengan sistem inventori otomatis, keranjang belanja, checkout, dan integrasi payment gateway.',
+            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+            screenshots: [
+                'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+                'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=1200&q=80',
+                'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1200&q=80'
+            ],
+            features: ['Katalog Produk', 'Keranjang Belanja', 'Checkout', 'Payment Gateway', 'Inventory Management'],
+            client: 'Boutique Fashion Hijab',
+            year: '2024',
+            url: 'https://boutiquehijab.id',
+            status: 'Aktif'
+        },
+        {
+            id: 'startup-digital-agency',
+            title: 'Startup Digital Agency',
+            category: 'Landing Page',
+            description: 'Landing page profesional untuk agensi digital dengan fitur portfolio dan pricing.',
+            fullDescription: 'Landing page modern dan profesional untuk Startup Digital Agency. Didesain dengan fokus pada konversi tinggi, menampilkan portfolio proyek, pricing packages, dan form kontak.',
+            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80',
+            screenshots: [
+                'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80',
+                'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1200&q=80',
+                'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'
+            ],
+            features: ['Hero Section', 'Portfolio Showcase', 'Pricing Table', 'Testimonials', 'Contact Form'],
+            client: 'Startup Digital Agency',
+            year: '2024',
+            url: 'https://startup-digital.id',
+            status: 'Aktif'
         }
     ];
 

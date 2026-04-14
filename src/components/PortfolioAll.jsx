@@ -1,0 +1,195 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Eye } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
+
+const PortfolioAll = () => {
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const projects = [
+        {
+            id: 'educare-platform',
+            title: 'EduCare Platform',
+            category: 'Company Profile',
+            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
+            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+        },
+        {
+            id: 'kopi-kenangan-senja',
+            title: 'Kopi Kenangan Senja',
+            category: 'UMKM',
+            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
+            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
+        },
+        {
+            id: 'saas-analytics-dashboard',
+            title: 'SaaS Analytics Dashboard',
+            category: 'Landing Page',
+            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+        },
+        {
+            id: 'toko-sepatu-maju',
+            title: 'Toko Sepatu Maju',
+            category: 'E-Commerce',
+            description: 'Website toko online untuk penjualan sepatu dengan sistem keranjang belanja dan pembayaran.',
+            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',
+        },
+        {
+            id: 'klinik-sehat-sejahtera',
+            title: 'Klinik Sehat Sejahtera',
+            category: 'Company Profile',
+            description: 'Website profil klinik dengan sistem appointment online dan informasi layanan kesehatan.',
+            image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
+        },
+        {
+            id: 'restoran-sedap-mantap',
+            title: 'Restoran Sedap Mantap',
+            category: 'UMKM',
+            description: 'Website restoran dengan menu digital dan sistem reservasi meja online.',
+            image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+        },
+        {
+            id: 'travel-eksplorasi',
+            title: 'Travel Eksplorasi',
+            category: 'Company Profile',
+            description: 'Website agensi perjalanan dengan sistem pemesanan paket wisata dan blog travel.',
+            image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
+        },
+        {
+            id: 'boutique-fashion-hijab',
+            title: 'Boutique Fashion Hijab',
+            category: 'E-Commerce',
+            description: 'Toko online fashion hijab dengan sistem inventori dan pembayaran yang lengkap.',
+            image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+        },
+        {
+            id: 'startup-digital-agency',
+            title: 'Startup Digital Agency',
+            category: 'Landing Page',
+            description: 'Landing page profesional untuk agensi digital dengan fitur portfolio dan pricing.',
+            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+        },
+    ];
+
+    return (
+        <div className="min-h-screen bg-white">
+            <ScrollToTop />
+            {/* Navigation */}
+            <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center h-16">
+                        <Link to="/" className="flex items-center text-gray-600 hover:text-primary transition-colors">
+                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                            Kembali
+                        </Link>
+                        <Link to="/" className="flex items-center">
+                            <img
+                                src="https://medivacare.com/wp-content/uploads/2026/04/Logo-Digilabs-Kreasi-Nusantara.png"
+                                alt="PT DigiLabs Kreasi Nusantara"
+                                className="h-10 w-auto"
+                            />
+                        </Link>
+                        <div className="w-20"></div>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Header */}
+            <div className="py-16 bg-gradient-to-b from-gray-50 to-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto">
+                        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Karya Terbaik Kami</h1>
+                        <p className="text-lg text-gray-600">
+                            Berikut adalah portofolio lengkap proyek website yang telah berhasil kami buat untuk membantu berbagai jenis bisnis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Portfolio Grid */}
+            <div className="py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {projects.map((project, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+                            >
+                                <div className="relative h-60 overflow-hidden bg-gray-100">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                        <Link
+                                            to={`/portfolio/${project.id}`}
+                                            className="bg-white text-gray-900 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary hover:text-white"
+                                        >
+                                            <Eye className="w-5 h-5" />
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="p-6 flex-1 flex flex-col">
+                                    <div className="mb-3">
+                                        <span className="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-medium rounded-full">
+                                            {project.category}
+                                        </span>
+                                    </div>
+                                    <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                        {project.title}
+                                    </h4>
+                                    <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                                        {project.description}
+                                    </p>
+                                    <div className="mt-4 pt-4 border-t border-gray-100">
+                                        <Link
+                                            to={`/portfolio/${project.id}`}
+                                            className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                                        >
+                                            <Eye className="w-4 h-4 mr-2" />
+                                            Preview
+                                        </Link>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="py-16 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Butuh website seperti ini?</h2>
+                    <p className="text-lg text-gray-600 mb-8">
+                        Konsultasikan kebutuhan website Anda dengan tim kami sekarang.
+                    </p>
+                    <Link
+                        to="/#contact"
+                        className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-colors"
+                    >
+                        Hubungi Kami
+                    </Link>
+                </div>
+            </div>
+
+            {/* Footer */}
+            <Footer />
+        </div>
+    );
+};
+
+export default PortfolioAll;
