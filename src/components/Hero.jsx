@@ -58,7 +58,7 @@ const Hero = () => {
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative lg:ml-10"
+                        className="relative lg:ml-10 hidden lg:block"
                     >
                         {/* Abstract mockup representation */}
                         <div className="relative rounded-2xl bg-white shadow-2xl p-2 border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-500">
