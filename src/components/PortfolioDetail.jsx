@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Calendar, Tag, Image, Archive } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Tag, Image, Archive, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PortfolioDetail = () => {
@@ -225,19 +225,19 @@ const PortfolioDetail = () => {
                                 </div>
                             )}
 
-                            <div className="flex gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4">
                                 {isActive(project.status) ? (
                                     <a
                                         href={project.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-colors"
+                                        className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition-colors"
                                     >
                                         <ExternalLink className="w-5 h-5 mr-2" />
                                         Kunjungi Website
                                     </a>
                                 ) : (
-                                    <div className="inline-flex items-center px-6 py-3 bg-gray-100 text-gray-500 font-medium rounded-full cursor-not-allowed">
+                                    <div className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-500 font-medium rounded-full cursor-not-allowed">
                                         <Archive className="w-5 h-5 mr-2" />
                                         Domain Tidak Aktif
                                     </div>
@@ -246,8 +246,9 @@ const PortfolioDetail = () => {
                                     href="https://wa.me/6281234567890"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-colors"
+                                    className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-colors"
                                 >
+                                    <Phone className="w-5 h-5 mr-2" />
                                     Hubungi Kami
                                 </a>
                             </div>
