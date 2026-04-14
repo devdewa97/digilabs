@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Calendar, Tag } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const PortfolioDetail = () => {
     const { id } = useParams();
+
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const projects = [
         {
@@ -54,17 +59,17 @@ const PortfolioDetail = () => {
             <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
-                        <Link to="/" className="flex items-center text-gray-600 hover:text-primary transition-colors">
+                        <a href="/#portfolio" className="flex items-center text-gray-600 hover:text-primary transition-colors">
                             <ArrowLeft className="w-5 h-5 mr-2" />
                             Kembali
-                        </Link>
-                        <Link to="/" className="flex items-center">
+                        </a>
+                        <a href="/#portfolio" className="flex items-center">
                             <img
                                 src="https://medivacare.com/wp-content/uploads/2026/04/Logo-Digilabs-Kreasi-Nusantara.png"
                                 alt="PT DigiLabs Kreasi Nusantara"
                                 className="h-10 w-auto"
                             />
-                        </Link>
+                        </a>
                         <div className="w-20"></div>
                     </div>
                 </div>
