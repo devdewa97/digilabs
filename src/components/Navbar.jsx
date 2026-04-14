@@ -14,11 +14,18 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+        setIsOpen(false);
+    };
+
     const navLinks = [
         { name: 'Home', href: '#home' },
         { name: 'Services', href: '#services' },
         { name: 'Pricing', href: '#pricing' },
-        { name: 'Portfolio', href: '#portfolio' },
     ];
 
     return (
@@ -41,6 +48,9 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
+                        <button onClick={() => scrollToSection('portfolio')} className="text-gray-600 hover:text-primary transition-colors font-medium">
+                            Portfolio
+                        </button>
                         <a href="https://wa.me/6281324887391" target="_blank" rel="noopener noreferrer" className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors shadow-sm hover:shadow-md">
                             Hubungi Kami
                         </a>
@@ -67,6 +77,12 @@ const Navbar = () => {
                                 {link.name}
                             </a>
                         ))}
+                        <button
+                            onClick={() => scrollToSection('portfolio')}
+                            className="block w-full text-left px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md"
+                        >
+                            Portfolio
+                        </button>
                         <a href="https://wa.me/6281324887391" target="_blank" rel="noopener noreferrer" className="block w-full mt-4 bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors text-center">
                             Hubungi Kami
                         </a>

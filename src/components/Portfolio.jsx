@@ -27,26 +27,26 @@ const Portfolio = () => {
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
         },
         {
-            id: 'educare-platform',
-            title: 'EduCare Platform',
+            id: 'toko-sepatu-maju',
+            title: 'Toko Sepatu Maju',
+            category: 'E-Commerce',
+            description: 'Website toko online untuk penjualan sepatu dengan sistem keranjang belanja dan pembayaran.',
+            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',
+        },
+        {
+            id: 'klinik-sehat-sejahtera',
+            title: 'Klinik Sehat Sejahtera',
             category: 'Company Profile',
-            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
-            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+            description: 'Website profil klinik dengan sistem appointment online dan informasi layanan kesehatan.',
+            image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
         },
         {
-            id: 'kopi-kenangan-senja',
-            title: 'Kopi Kenangan Senja',
+            id: 'restoran-sedap-mantap',
+            title: 'Restoran Sedap Mantap',
             category: 'UMKM',
-            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
-            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
+            description: 'Website restoran dengan menu digital dan sistem reservasi meja online.',
+            image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
         },
-        {
-            id: 'saas-analytics-dashboard',
-            title: 'SaaS Analytics Dashboard',
-            category: 'Landing Page',
-            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-        }
     ];
 
     return (
@@ -61,7 +61,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
+                    {projects.slice(0, 6).map((project, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
