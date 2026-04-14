@@ -53,7 +53,7 @@ Boleh minta info lebih lanjut? Terima kasih 🙏`;
         <section className="relative py-24 overflow-hidden">
             {/* Background with modern gradient */}
             <div className="absolute inset-0 bg-primary">
-                <div className="absolute inset-0 bg-linear-to-r from-blue-700 to-blue-500 opacity-90"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 opacity-90"></div>
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3">
                     <svg width="404" height="384" fill="none" viewBox="0 0 404 384" className="opacity-20">
