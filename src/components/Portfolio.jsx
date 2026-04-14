@@ -1,0 +1,124 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ExternalLink, Eye } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const Portfolio = () => {
+    const projects = [
+        {
+            id: 'educare-platform',
+            title: 'EduCare Platform',
+            category: 'Company Profile',
+            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
+            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+        },
+        {
+            id: 'kopi-kenangan-senja',
+            title: 'Kopi Kenangan Senja',
+            category: 'UMKM',
+            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
+            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
+        },
+        {
+            id: 'saas-analytics-dashboard',
+            title: 'SaaS Analytics Dashboard',
+            category: 'Landing Page',
+            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+        },
+        {
+            id: 'educare-platform',
+            title: 'EduCare Platform',
+            category: 'Company Profile',
+            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
+            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+        },
+        {
+            id: 'kopi-kenangan-senja',
+            title: 'Kopi Kenangan Senja',
+            category: 'UMKM',
+            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
+            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
+        },
+        {
+            id: 'saas-analytics-dashboard',
+            title: 'SaaS Analytics Dashboard',
+            category: 'Landing Page',
+            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+        }
+    ];
+
+    return (
+        <section id="portfolio" className="py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-primary font-semibold tracking-wide uppercase text-sm mb-3">Portofolio Kami</h2>
+                    <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Hasil Karya Terbaik Kami</h3>
+                    <p className="text-lg text-gray-600">
+                        Berikut adalah beberapa proyek website yang telah berhasil kami buat untuk membantu berbagai jenis bisnis.
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+                        >
+                            <div className="relative h-60 overflow-hidden bg-gray-100">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                    <Link
+                                        to={`/portfolio/${project.id}`}
+                                        className="bg-white text-gray-900 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 hover:bg-primary hover:text-white"
+                                    >
+                                        <Eye className="w-5 h-5" />
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="p-6 flex-1 flex flex-col">
+                                <div className="mb-3">
+                                    <span className="inline-block px-3 py-1 bg-blue-50 text-primary text-xs font-medium rounded-full">
+                                        {project.category}
+                                    </span>
+                                </div>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                    {project.title}
+                                </h4>
+                                <p className="text-gray-600 text-sm leading-relaxed flex-1">
+                                    {project.description}
+                                </p>
+                                <div className="mt-4 pt-4 border-t border-gray-100">
+                                    <Link
+                                        to={`/portfolio/${project.id}`}
+                                        className="inline-flex items-center text-primary font-medium text-sm hover:underline"
+                                    >
+                                        <Eye className="w-4 h-4 mr-2" />
+                                        Preview
+                                    </Link>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <button className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                        Lihat Semua Portofolio
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Portfolio;
