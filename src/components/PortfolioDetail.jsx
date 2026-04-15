@@ -13,57 +13,42 @@ const PortfolioDetail = () => {
 
     const projects = [
         {
-            id: 'educare-platform',
-            title: 'EduCare Platform',
-            category: 'Company Profile',
-            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
-            fullDescription: 'EduCare Platform adalah solution komprehensif untuk institusi pendidikan yang membutuhkan presence online profesional. Website ini dilengkapi dengan sistem pendaftaran online yang streamline, blog untuk berbagi informasi, dan dashboard admin yang mudah digunakan.',
-            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1200&q=80',
-                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
-                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80'
-            ],
-            features: ['Pendaftaran Online', 'Blog & Articles', 'Dashboard Admin', 'Responsive Design', 'SEO Optimized'],
-            client: 'EduCare Indonesia',
-            year: '2024',
-            url: 'https://educare-indonesia.com',
-            status: 'Domain Tidak Aktif'
-        },
-        {
-            id: 'kopi-kenangan-senja',
-            title: 'Kopi Kenangan Senja',
-            category: 'UMKM',
-            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
-            fullDescription: 'Platform katalog online yang elegan untuk kedai kopi Kopi Kenangan Senja. Dilengkapi dengan menu digital yang mudah diupdate, sistem pemesanan, dan desain yang menarik.',
-            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=80',
-                'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80',
-                'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=80'
-            ],
-            features: ['Menu Digital', 'Sistem Pemesanan', 'Foto Galeri', 'Sistem Reservasi Meja', 'Responsive Design'],
-            client: 'Kopi Kenangan Senja',
-            year: '2024',
-            url: 'https://kopikenangan-senja.id',
+             id: 'AI SaaS Product',
+            title: 'Vokalita Generate Voice ',
+            category: 'AI SaaS Product',
+            description: 'Vokalita adalah platform AI Voice Over yang menggunakan bank suara manusia untuk menghasilkan audio seperti manusia asli.',
+            fullDescription: 'Vokalita adalah platform AI Voice Over berbasis web yang memungkinkan pengguna mengubah teks menjadi audio berkualitas tinggi dengan suara yang natural, ekspresif, dan terdengar seperti manusia asli.',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-2.jpg',
+            features: ['Text To Voice Generator', 'Karakter Vokal Beragam', 'Gaya Penyampaian', 'Proces Cepat & Praktis', 'Kualitas Audio Natural', 'Gratis Digunakan'],
+            client: 'Personal Project',
+            year: '2025',
+            url: 'https://vokalita.digilabkreasi.my.id/',
             status: 'Aktif'
         },
         {
-            id: 'saas-analytics-dashboard',
-            title: 'SaaS Analytics Dashboard',
-            category: 'Landing Page',
-            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
+            id: 'Website Arlindo Trans',
+            title: 'Website Arlindo Trans',
+            category: 'Company Profile',
+            description: 'Arlindo Trans adalah layanan sewa bus pariwisata yang menghadirkan perjalanan nyaman, aman, dan berkesan untuk setiap momen spesial Anda.',
+            fullDescription: 'Penyedia layanan sewa bus pariwisata terpercaya yang siap memenuhi kebutuhan perjalanan Anda dengan nyaman, aman, dan tepat waktu. Kami menghadirkan armada bus berkualitas dengan fasilitas lengkap serta didukung oleh tim profesional yang berpengalaman. Melayani berbagai kebutuhan perjalanan seperti wisata keluarga, study tour, perjalanan perusahaan, hingga event khusus, Arlindo Trans berkomitmen memberikan pengalaman perjalanan terbaik dengan pelayanan prima dan harga yang kompetitif.',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-1.jpg',
+            features: ['Responsive Design', 'SEO Friendly', 'Fast Loading', 'WA CTA Floating Button', 'Testimoni Slider'],
+            client: 'PT ARLINDO MULTI JASA (ARLINDO TRANS)',
+            year: '2025',
+            url: 'https://arlindo-trans.vercel.app/',
+            status: 'Aktif'
+        },
+        {
+            id: 'Landingpage Ebook',
+            title: 'LandingPage Promosi Ebook ',
+            category: 'LandingPage',
+            description: 'Landing page promosi yang fokus menarik perhatian dan mendorong pengunjung langsung melakukan konversi.',
             fullDescription: 'Landing page high-converting untuk software analytics bisnis. Didesain dengan fokus pada konversi dan user experience yang optimal.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80',
-                'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
-                'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80'
-            ],
-            features: ['Hero Section', 'Feature Showcase', 'Pricing Table', 'Testimonials', 'CTA Section'],
-            client: 'TechCorp Analytics',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-3.jpg',
+            features: ['Fully Responsive Design', 'Direct To WhatsApp', 'Fast Loading', 'Fokus Pada Konversi', 'Design Modern & Profesional', 'Struktur Konten Jelas'],
+            client: 'Klinik Medivacare Indonesia',
             year: '2024',
-            url: 'https://techcorp-analytics.com',
+            url: 'https://medivacare.com/ebook/',
             status: 'Aktif'
         },
         {

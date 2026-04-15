@@ -35,11 +35,11 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-lg font-bold mb-6">Layanan</h4>
                         <ul className="space-y-3">
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Company Profile</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Landing Page</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Website Toko Online</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Redesign Website</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Maintenance & SEO</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Website Company Profile</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Landing Page</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Website Toko Online</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Redesign Website</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Maintenance & SEO</a></li>
                         </ul>
                     </div>
 
@@ -47,11 +47,11 @@ const Footer = () => {
                     <div>
                         <h4 className="text-white text-lg font-bold mb-6">Perusahaan</h4>
                         <ul className="space-y-3">
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Beranda</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Harga Paket</a></li>
-                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400 hover:text-white">Portofolio</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Tentang Kami</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors text-gray-400 hover:text-white">Kebijakan Privasi</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Beranda</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Harga Paket</a></li>
+                            <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-primary transition-colors text-gray-400">Portofolio</a></li>
+                            <li><a href="#" className="hover:text-primary transition-colors text-gray-400">Tentang Kami</a></li>
+                            <li><a href="#" className="transition-colors text-gray-400 hover:text-white">Kebijakan Privasi</a></li>
                         </ul>
                     </div>
 
@@ -80,9 +80,12 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-800 pt-8">
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
                         <p className="text-sm text-gray-500">
                             &copy; {new Date().getFullYear()} <span className="text-white font-semibold">PT DIGILABS KREASI NUSANTARA</span>. All rights reserved.
+                        </p>
+                        <p className="text-sm text-gray-500">
+                            Seluruh hak cipta dilindungi.
                         </p>
                     </div>
                 </div>

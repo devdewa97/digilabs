@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 const Portfolio = () => {
     const projects = [
         {
-            id: 'educare-platform',
-            title: 'EduCare Platform',
+            id: 'AI SaaS Product',
+            title: 'Vokalita Generate Voice ',
+            category: 'AI SaaS Product',
+            description: 'Vokalita adalah platform AI Voice Over yang menggunakan bank suara manusia untuk menghasilkan audio seperti manusia.',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-2.jpg',
+        },
+        {
+            id: 'Website Arlindo Trans',
+            title: 'Website Arlindo Trans',
             category: 'Company Profile',
-            description: 'Website profil perusahaan untuk institusi pendidikan dengan fitur pendaftaran online dan blog informasi.',
-            image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80',
+            description: 'Arlindo Trans adalah layanan sewa bus pariwisata yang menghadirkan perjalanan nyaman, aman, dan berkesan untuk setiap momen spesial Anda.',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-1.jpg?w=800&q=80',
         },
         {
-            id: 'kopi-kenangan-senja',
-            title: 'Kopi Kenangan Senja',
-            category: 'UMKM',
-            description: 'Katalog online untuk kedai kopi lokal dengan fitur pemesanan dan menu digital responsif.',
-            image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80',
-        },
-        {
-            id: 'saas-analytics-dashboard',
-            title: 'SaaS Analytics Dashboard',
-            category: 'Landing Page',
-            description: 'Landing page modern dengan konversi tinggi untuk aplikasi perangkat lunak analitik bisnis.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+             id: 'Landingpage Ebook',
+            title: 'LandingPage Promosi Ebook ',
+            category: 'LandingPage',
+            description: 'Landing page promosi yang fokus menarik perhatian dan mendorong pengunjung langsung melakukan konversi.',
+            image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-3.jpg',
         },
         {
             id: 'toko-sepatu-maju',

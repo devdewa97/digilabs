@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-white">
+        <section id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-linear-to-br from-blue-50 via-white to-white">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-100/50 blur-3xl opacity-50"></div>
             <div className="absolute top-40 left-0 -ml-20 w-72 h-72 rounded-full bg-blue-50 blur-3xl opacity-50"></div>
@@ -22,14 +22,14 @@ const Hero = () => {
                             Layanan Pembuatan Website Terbaik
                         </div>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                            Solusi Website Profesional untuk Meningkatkan Kredibilitas <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Bisnis Anda</span>
+                            Solusi Website Profesional untuk Meningkatkan Kredibilitas <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">Bisnis Anda</span>
                         </h1>
                         <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
                             Kami menghadirkan website profesional dengan desain modern, performa cepat, dan pengalaman pengguna yang optimal untuk meningkatkan kredibilitas serta pertumbuhan bisnis Anda.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                            <a href="#pricing" className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+                            <a href="#pricing" className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-linear-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
                                 Pesan Sekarang
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </a>
