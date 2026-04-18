@@ -29,7 +29,14 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                            <a href="#pricing" className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-linear-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5">
+                            <a
+                                href="#pricing"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-linear-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 cursor-pointer"
+                            >
                                 Pesan Sekarang
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </a>

@@ -7,6 +7,7 @@ const Pricing = () => {
         {
             name: 'Starter Website',
             price: 'Rp699.000',
+            priceBefore: 'Rp1.399.000',
             priceNote: 'Perpanjang Rp400.000/tahun',
             description: 'Solusi terjangkau untuk bisnis pemula dan personal.',
             features: [
@@ -18,17 +19,18 @@ const Pricing = () => {
                 'Pengerjaan 3 – 5 Hari'
             ],
             popular: false,
+            isPromo: true,
             buttonText: 'Pilih Paket Starter',
             greeting: 'Halo kak 👋 saya tertarik dengan Paket Starter Website. Boleh minta info lebih lanjut terkait detail layanan dan proses pengerjaannya? Terima kasih 🙏',
         },
         {
             name: 'Business Website',
             price: 'Rp2.499.000',
-            priceNote: 'Perpanjang Rp600.000/tahun',
+            priceNote: 'Perpanjang Rp700.000/tahun',
             description: 'Pilihan ideal untuk perusahaan yang ingin tampil profesional.',
             features: [
                 'Custom Design',
-                'Lebih Banyak Halaman (Up to 10)',
+                'Lebih Banyak Halaman (8 - 10)',
                 'SEO Friendly',
                 'Mobile Responsive',
                 'Full Akses Hosting & CPanel',
@@ -88,12 +90,26 @@ const Pricing = () => {
                                     </span>
                                 </div>
                             )}
+                            {plan.isPromo && (
+                                <div className="absolute top-0 right-4 -translate-y-1/2">
+                                    <span className="bg-linear-to-r from-orange-500 via-red-500 to-pink-500 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg animate-pulse">
+                                        Promo Terbatas !
+                                    </span>
+                                </div>
+                            )}
 
                             <div className="mb-8">
                                 <h4 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h4>
                                 <p className="text-gray-500 text-sm h-10">{plan.description}</p>
-                                <div className="mt-4 text-3xl font-extrabold text-gray-900">
-                                    {plan.price}
+                                <div className="mt-4 flex items-baseline gap-2">
+                                    {plan.priceBefore && (
+                                        <span className="text-lg text-gray-400 line-through">
+                                            {plan.priceBefore}
+                                        </span>
+                                    )}
+                                    <div className="text-3xl font-extrabold text-gray-900">
+                                        {plan.price}
+                                    </div>
                                 </div>
                                 {plan.priceNote && (
                                     <p className="text-sm text-gray-500 mt-1">

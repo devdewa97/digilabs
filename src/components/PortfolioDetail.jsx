@@ -13,10 +13,9 @@ const PortfolioDetail = () => {
 
     const projects = [
         {
-             id: 'AI SaaS Product',
+            id: 'AI SaaS Product',
             title: 'Vokalita Generate Voice ',
             category: 'AI SaaS Product',
-            description: 'Vokalita adalah platform AI Voice Over yang menggunakan bank suara manusia untuk menghasilkan audio seperti manusia asli.',
             fullDescription: 'Vokalita adalah platform AI Voice Over berbasis web yang memungkinkan pengguna mengubah teks menjadi audio berkualitas tinggi dengan suara yang natural, ekspresif, dan terdengar seperti manusia asli.',
             image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-2.jpg',
             features: ['Text To Voice Generator', 'Karakter Vokal Beragam', 'Gaya Penyampaian', 'Proces Cepat & Praktis', 'Kualitas Audio Natural', 'Gratis Digunakan'],
@@ -29,7 +28,6 @@ const PortfolioDetail = () => {
             id: 'Website Arlindo Trans',
             title: 'Website Arlindo Trans',
             category: 'Company Profile',
-            description: 'Arlindo Trans adalah layanan sewa bus pariwisata yang menghadirkan perjalanan nyaman, aman, dan berkesan untuk setiap momen spesial Anda.',
             fullDescription: 'Penyedia layanan sewa bus pariwisata terpercaya yang siap memenuhi kebutuhan perjalanan Anda dengan nyaman, aman, dan tepat waktu. Kami menghadirkan armada bus berkualitas dengan fasilitas lengkap serta didukung oleh tim profesional yang berpengalaman. Melayani berbagai kebutuhan perjalanan seperti wisata keluarga, study tour, perjalanan perusahaan, hingga event khusus, Arlindo Trans berkomitmen memberikan pengalaman perjalanan terbaik dengan pelayanan prima dan harga yang kompetitif.',
             image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-1.jpg',
             features: ['Responsive Design', 'SEO Friendly', 'Fast Loading', 'WA CTA Floating Button', 'Testimoni Slider'],
@@ -42,7 +40,6 @@ const PortfolioDetail = () => {
             id: 'Landingpage Ebook',
             title: 'LandingPage Promosi Ebook ',
             category: 'LandingPage',
-            description: 'Landing page promosi yang fokus menarik perhatian dan mendorong pengunjung langsung melakukan konversi.',
             fullDescription: 'Landing page high-converting untuk software analytics bisnis. Didesain dengan fokus pada konversi dan user experience yang optimal.',
             image: 'https://medivacare.com/wp-content/uploads/2026/04/Digilabs-Kreasi-Nusantara-3.jpg',
             features: ['Fully Responsive Design', 'Direct To WhatsApp', 'Fast Loading', 'Fokus Pada Konversi', 'Design Modern & Profesional', 'Struktur Konten Jelas'],
@@ -52,39 +49,27 @@ const PortfolioDetail = () => {
             status: 'Aktif'
         },
         {
-            id: 'toko-sepatu-maju',
-            title: 'Toko Sepatu Maju',
-            category: 'E-Commerce',
-            description: 'Website toko online untuk penjualan sepatu dengan sistem keranjang belanja dan pembayaran.',
-            fullDescription: 'Platform e-commerce lengkap untuk toko sepatu dengan fitur keranjang belanja, checkout, integrasi payment gateway, dan sistem inventori otomatis.',
-            image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80',
-                'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=1200&q=80',
-                'https://images.unsplash.com/photo-1491553895911-0055uj?w=1200&q=80'
-            ],
-            features: ['Keranjang Belanja', 'Checkout', 'Payment Gateway', 'Inventory Management', 'Responsive Design'],
-            client: 'Toko Sepatu Maju',
+            id: 'Website Cat Cafe',
+            title: 'Website Cat Cafe',
+            category: 'Company Profile',
+            fullDescription: 'Cat Cafe Arlindo adalah tempat nongkrong unik yang menggabungkan suasana kafe yang nyaman dengan kehadiran kucing-kucing lucu dan menggemaskan, menciptakan pengalaman santai yang berbeda dan menyenangkan bagi para pengunjung. Website Cat Cafe Arlindo dirancang dengan tampilan modern, interaktif, dan user-friendly untuk memudahkan pengunjung dalam mengeksplorasi informasi serta melakukan reservasi secara online.',
+            image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1776394094/Digilabs_Kreasi_Nusantara_4_d6mv1z.jpg',
+            features: ['Responsive Design', 'Navigasi Lengkap', 'Animasi & Transisi Halus', 'Reservasi Online Terintegrasi', 'Desain Modern', 'Fitur Pendukung Lengkap', 'SEO Friendly'],
+            client: 'Cat Cafe by Arlindo',
             year: '2024',
-            url: 'https://tokosepatumaju.com',
+            url: 'https://catcafearlindo.com/',
             status: 'Aktif'
         },
         {
-            id: 'klinik-sehat-sejahtera',
-            title: 'Klinik Sehat Sejahtera',
+            id: 'nusadaya academy',
+            title: 'Website Nusadaya Academy',
             category: 'Company Profile',
-            description: 'Website profil klinik dengan sistem appointment online dan informasi layanan kesehatan.',
-            fullDescription: 'Website company profile untuk klinik dengan fitur appointment online, informasi dokter, layanan kesehatan, dan blog kesehatan.',
-            image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=80',
-                'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80',
-                'https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1200&q=80'
-            ],
-            features: ['Appointment Online', 'Info Dokter', 'Layanan Kesehatan', 'Blog Kesehatan', 'Responsive Design'],
-            client: 'Klinik Sehat Sejahtera',
-            year: '2023',
-            url: 'https://kliniksehatsejahtera.com',
+            fullDescription: 'Nusadaya Academy adalah institusi pendidikan berbasis industri di bidang pariwisata dan perhotelan yang berfokus mencetak lulusan siap kerja dan berdaya saing global. Website company profile ini menghadirkan informasi lengkap seputar program, fasilitas, dan pendaftaran dalam tampilan modern, cepat, dan responsif.',
+            image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1776417500/Digilabs_Kreasi_Nusantara_5_ywri8u.jpg',
+            features: ['Pendaftaran Online Terintegrasi WhatsApp', 'Floating WhatsApp Chat', 'Promo Popup Otomatis', 'Fast Loading', 'Animasi Halus & UX Premium', 'Desain Responsive', 'SEO Friendly', 'Multi-page Navigation'],
+            client: 'Kampus Nusadaya Academy',
+            year: '2026',
+            url: 'https://nusday.vercel.app/',
             status: 'Aktif'
         },
         {
