@@ -5,7 +5,7 @@ export const client = createClient({
   projectId: 'nuvi2tav',
   dataset: 'production',
   useCdn: true,
-  apiVersion: '2024-01-01',
+  apiVersion: '2024-03-01',
 })
 
 const builder = createImageUrlBuilder(client)
