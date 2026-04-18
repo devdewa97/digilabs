@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { client, urlFor } from '../sanity'
 import { Calendar, Clock, ArrowRight, Search } from 'lucide-react'
 
@@ -9,16 +9,6 @@ export default function Blog() {
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
-  const [searchParams] = useSearchParams()
-  const navigate = useNavigate()
-
-  // Handle article redirect from og.js
-  useEffect(() => {
-    const articleSlug = searchParams.get('article')
-    if (articleSlug) {
-      navigate(`/blog/${articleSlug}`, { replace: true })
-    }
-  }, [searchParams, navigate])
 
   useEffect(() => {
     client.fetch(`
@@ -126,7 +116,7 @@ export default function Blog() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 {/* Featured Image */}
-                <Link to={`/og/${post.slug.current}`} className="block relative overflow-hidden">
+                <Link to={`/blog/${post.slug.current}`} className="block relative overflow-hidden">
                   {post.featuredImage ? (
                     <img
                       src={urlFor(post.featuredImage).width(500).height(300).url()}
@@ -148,7 +138,7 @@ export default function Blog() {
                 {/* Content */}
                 <div className="p-6">
                   <h2 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
-                    <Link to={`/og/${post.slug.current}`}>
+                    <Link to={`/blog/${post.slug.current}`}>
                       {post.title}
                     </Link>
                   </h2>
@@ -173,7 +163,7 @@ export default function Blog() {
                       </span>
                     </div>
                     <Link
-                      to={`/og/${post.slug.current}`}
+                      to={`/blog/${post.slug.current}`}
                       className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-blue-700 transition-colors"
                     >
                       Baca
