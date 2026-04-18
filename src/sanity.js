@@ -4,8 +4,8 @@ import createImageUrlBuilder from '@sanity/image-url'
 export const client = createClient({
   projectId: 'nuvi2tav',
   dataset: 'production',
-  useCdn: false,
-  apiVersion: '2025-01-01',
+  useCdn: true,
+  apiVersion: '2024-01-01',
 })
 
 const builder = createImageUrlBuilder(client)
