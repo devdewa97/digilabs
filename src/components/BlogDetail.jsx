@@ -55,8 +55,49 @@ export default function BlogDetail() {
   useEffect(() => {
     if (!loading && post) {
       window.scrollTo(0, 0)
+
+      // Update dynamic meta tags for social media preview
+      const ogTitle = post.title
+      const ogDescription = post.excerpt || post.title
+      const ogImage = post.featuredImage ? urlFor(post.featuredImage).width(1200).height(630).url() : 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1744975511/OG_Image_Digilabs_2_jpg_f8y4kc.jpg'
+      const canonicalUrl = `https://www.digilabkreasi.my.id/blog/${slug}`
+
+      // Update title
+      document.title = `${ogTitle} | Digilabs Kreasi`
+
+      // Update meta description
+      const metaDesc = document.querySelector('meta[name="description"]')
+      if (metaDesc) metaDesc.setAttribute('content', ogDescription)
+
+      // Update Open Graph tags
+      const ogTitleTag = document.querySelector('meta[property="og:title"]')
+      const ogDescTag = document.querySelector('meta[property="og:description"]')
+      const ogImageTag = document.querySelector('meta[property="og:image"]')
+      const ogUrlTag = document.querySelector('meta[property="og:url"]')
+      const ogTypeTag = document.querySelector('meta[property="og:type"]')
+
+      if (ogTitleTag) ogTitleTag.setAttribute('content', ogTitle)
+      if (ogDescTag) ogDescTag.setAttribute('content', ogDescription)
+      if (ogImageTag) ogImageTag.setAttribute('content', ogImage)
+      if (ogUrlTag) ogUrlTag.setAttribute('content', canonicalUrl)
+      if (ogTypeTag) ogTypeTag.setAttribute('content', 'article')
+
+      // Update Twitter cards
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]')
+      const twitterDesc = document.querySelector('meta[name="twitter:description"]')
+      const twitterImage = document.querySelector('meta[name="twitter:image"]')
+      const twitterUrl = document.querySelector('meta[name="twitter:url"]')
+
+      if (twitterTitle) twitterTitle.setAttribute('content', ogTitle)
+      if (twitterDesc) twitterDesc.setAttribute('content', ogDescription)
+      if (twitterImage) twitterImage.setAttribute('content', ogImage)
+      if (twitterUrl) twitterUrl.setAttribute('content', canonicalUrl)
+
+      // Update canonical URL
+      const canonicalLink = document.querySelector('link[rel="canonical"]')
+      if (canonicalLink) canonicalLink.setAttribute('href', canonicalUrl)
     }
-  }, [loading, post])
+  }, [loading, post, slug])
 
   if (loading) {
     return (
