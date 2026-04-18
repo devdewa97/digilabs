@@ -1,5 +1,5 @@
 // Edge function for dynamic OG tags
-// Serves proper HTML for social media crawlers
+// Serves proper HTML for social media crawlers (Facebook, Twitter, etc.)
 
 export const config = {
   runtime: 'edge',
@@ -24,9 +24,29 @@ async function fetchPost(slug) {
 const DEFAULT_IMG = 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1744975511/OG_Image_Digilabs_2_jpg_f8y4kc.jpg'
 const SITE = 'https://www.digilabkreasi.my.id'
 
+// List of social media crawlers
+const SOCIAL_CRAWLERS = [
+  'facebookexternalhit',
+  'facebookcatalog',
+  'Twitterbot',
+  'linkedinbot',
+  'slackbot',
+  'telegrambot',
+  'discordbot',
+  'whatsapp',
+  'applebot',
+]
+
+function isSocialCrawler(userAgent) {
+  if (!userAgent) return false
+  const ua = userAgent.toLowerCase()
+  return SOCIAL_CRAWLERS.some(bot => ua.includes(bot.toLowerCase()))
+}
+
 export default async function handler(req) {
   const url = new URL(req.url)
   const slug = url.searchParams.get('slug')
+  const userAgent = req.headers.get('user-agent') || ''
 
   if (!slug) {
     return new Response(null, { status: 302, headers: { Location: '/blog' } })
@@ -38,8 +58,15 @@ export default async function handler(req) {
   const img = post?.imageUrl || DEFAULT_IMG
   const blogUrl = `${SITE}/blog/${slug}`
 
-  // Add meta refresh to redirect users after they see the page
-  // This helps both crawlers get OG tags AND regular users get redirected
+  // If not a social crawler, redirect directly to blog page
+  if (!isSocialCrawler(userAgent)) {
+    return new Response(null, {
+      status: 302,
+      headers: { Location: blogUrl }
+    })
+  }
+
+  // Serve OG tags for social media crawlers (no redirect)
   const html = `<!DOCTYPE html>
 <html lang="id">
 <head>
@@ -47,7 +74,6 @@ export default async function handler(req) {
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>${title} | Digilabs Kreasi</title>
 <meta name="description" content="${desc}"/>
-<meta http-equiv="refresh" content="0;url=${blogUrl}"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article"/>
@@ -68,9 +94,7 @@ export default async function handler(req) {
 <link rel="canonical" href="${blogUrl}"/>
 </head>
 <body>
-<h1>${title}</h1>
-<p>${desc}</p>
-<p>Redirecting...</p>
+<p>Redirecting to article...</p>
 </body>
 </html>`
 
