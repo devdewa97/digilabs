@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ forceWhite = false }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,22 +16,40 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Check if we're on home page
+    const isHomePage = location.pathname === '/' || location.pathname === '#home';
+
+    // Force white background for blog pages
+    const isWhite = forceWhite || scrolled;
+
     const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+        if (isHomePage) {
+            // If on home page, scroll directly
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // If not on home page, navigate to home first then scroll
+            window.location.href = '#' + sectionId;
         }
         setIsOpen(false);
+    };
+
+    const handleSectionClick = (e, sectionId) => {
+        e.preventDefault();
+        scrollToSection(sectionId);
     };
 
     const navLinks = [
         { name: 'Home', section: 'home' },
         { name: 'Services', section: 'services' },
         { name: 'Portfolio', href: '/karya-terbaik-kami', isRoute: true },
+        { name: 'Blog', href: '/blog', isRoute: true },
         { name: 'Pricing', section: 'pricing' },
     ];
 
-    const renderNavLink = (link, isMobile = false) => {
+    const renderNavLink = (link) => {
         if (link.isRoute) {
             return (
                 <Link key={link.name} to={link.href} className="text-gray-600 hover:text-primary transition-colors font-medium">
@@ -41,10 +60,13 @@ const Navbar = () => {
         return (
             <a
                 key={link.name}
-                href={'#' + link.section}
+                href={isHomePage ? '#' + link.section : '/'}
                 onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.section);
+                    if (isHomePage) {
+                        e.preventDefault();
+                        scrollToSection(link.section);
+                    }
+                    // If not on home page, just navigate to home page (default behavior)
                 }}
                 className="text-gray-600 hover:text-primary transition-colors font-medium"
             >
@@ -54,7 +76,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${isWhite ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-white py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center">
@@ -96,18 +118,21 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ) : (
-                                <a
-                                    key={link.name}
-                                    href={'#' + link.section}
+                                <Link
+                                    to="/"
+                                    className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md"
                                     onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToSection(link.section);
+                                        if (!isHomePage) {
+                                            // Navigate to home page - let the link work normally
+                                        } else {
+                                            e.preventDefault();
+                                            scrollToSection(link.section);
+                                        }
                                         setIsOpen(false);
                                     }}
-                                    className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50 rounded-md"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             )
                         ))}
                         <a href="https://wa.me/6281324887391" target="_blank" rel="noopener noreferrer" className="block w-full mt-4 bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors text-center">

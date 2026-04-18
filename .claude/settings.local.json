@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(npm install react-router-dom)",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(npx sanity deploy)",
+      "Bash(npx sanity api-version show)",
+      "Bash(npx sanity cors list)"
     ]
   }
 }
