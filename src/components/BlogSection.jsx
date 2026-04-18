@@ -119,7 +119,7 @@ const BlogSection = () => {
                     </div>
 
                     <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      <Link to={`/blog/${post.slug.current}`}>
+                      <Link to={`/api/og/${post.slug.current}`}>
                         {post.title}
                       </Link>
                     </h3>
@@ -131,7 +131,7 @@ const BlogSection = () => {
                     )}
 
                     <Link
-                      to={`/blog/${post.slug.current}`}
+                      to={`/api/og/${post.slug.current}`}
                       className="inline-flex items-center text-blue-600 text-sm font-semibold hover:text-blue-800 transition-colors mt-auto"
                     >
                       Baca Selengkapnya

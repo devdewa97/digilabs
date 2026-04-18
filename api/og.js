@@ -24,17 +24,25 @@ async function fetchPost(slug) {
 const DEFAULT_IMG = 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1744975511/OG_Image_Digilabs_2_jpg_f8y4kc.jpg'
 const SITE = 'https://www.digilabkreasi.my.id'
 
-// List of social media crawlers
+// List of social media crawlers - expanded list
 const SOCIAL_CRAWLERS = [
   'facebookexternalhit',
   'facebookcatalog',
+  'facebook',
   'Twitterbot',
+  'twitterbot',
   'linkedinbot',
   'slackbot',
   'telegrambot',
   'discordbot',
   'whatsapp',
   'applebot',
+  'googlebot',
+  'bingbot',
+  'yandex',
+  'duckduckbot',
+  'pinterest',
+  'tiktok',
 ]
 
 function isSocialCrawler(userAgent) {
@@ -53,16 +61,26 @@ export default async function handler(req) {
   }
 
   const post = await fetchPost(slug)
-  const title = post?.title || 'Artikel - Digilabs Kreasi'
-  const desc = post?.excerpt || 'Baca artikel menarik di Digilabs Kreasi Nusantara'
-  const img = post?.imageUrl || DEFAULT_IMG
+
+  // If post not found, redirect to blog page with article not found message
+  if (!post) {
+    return new Response(null, {
+      status: 302,
+      headers: { Location: '/blog?error=notfound' }
+    })
+  }
+
+  const title = post.title
+  const desc = post.excerpt || 'Baca artikel menarik di Digilabs Kreasi Nusantara'
+  const img = post.imageUrl || DEFAULT_IMG
   const blogUrl = `${SITE}/blog/${slug}`
 
-  // If not a social crawler, redirect directly to blog page
+  // If not a social crawler, redirect to blog page with article param
+  // Use ?article= slug instead of /slug to avoid infinite loop
   if (!isSocialCrawler(userAgent)) {
     return new Response(null, {
       status: 302,
-      headers: { Location: blogUrl }
+      headers: { Location: `/blog?article=${slug}` }
     })
   }
 
