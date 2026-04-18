@@ -126,7 +126,7 @@ export default function Blog() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 {/* Featured Image */}
-                <Link to={`/api/og/${post.slug.current}`} className="block relative overflow-hidden">
+                <Link to={`/og/${post.slug.current}`} className="block relative overflow-hidden">
                   {post.featuredImage ? (
                     <img
                       src={urlFor(post.featuredImage).width(500).height(300).url()}
@@ -148,7 +148,7 @@ export default function Blog() {
                 {/* Content */}
                 <div className="p-6">
                   <h2 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
-                    <Link to={`/api/og/${post.slug.current}`}>
+                    <Link to={`/og/${post.slug.current}`}>
                       {post.title}
                     </Link>
                   </h2>
@@ -173,7 +173,7 @@ export default function Blog() {
                       </span>
                     </div>
                     <Link
-                      to={`/api/og/${post.slug.current}`}
+                      to={`/og/${post.slug.current}`}
                       className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-blue-700 transition-colors"
                     >
                       Baca
