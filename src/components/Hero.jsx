@@ -15,20 +15,20 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="max-w-5xl"
+                        className="max-w-5xl text-center lg:text-left"
                     >
                         <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-blue-100/50 text-blue-700 font-medium text-sm mb-10 border border-blue-200">
                             <span className="flex h-2 w-2 rounded-full bg-blue-600 mr-2"></span>
                             Layanan Pembuatan Website Terbaik
                         </div>
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.9] mb-10">
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight sm:leading-[1.9] mb-8 sm:mb-10">
                             Solusi Website Profesional untuk Meningkatkan Kredibilitas <span className="text-primary">Bisnis Anda</span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-[2]">
+                        <p className="text-lg sm:text-xl text-gray-600 mb-10 sm:mb-12 leading-relaxed sm:leading-[2]">
                             Kami menghadirkan website profesional dengan desain modern, performa cepat, dan pengalaman pengguna yang optimal untuk meningkatkan kredibilitas serta pertumbuhan bisnis Anda.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                        <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center lg:justify-start">
                             <a
                                 href="#pricing"
                                 onClick={(e) => {
@@ -53,7 +53,7 @@ const Hero = () => {
                             </button>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 font-medium">
+                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600 font-medium">
                             <div className="flex items-center gap-2">
                                 <CheckCircle2 className="h-5 w-5 text-green-500" />
                                 <span>3-5 Hari Selesai</span>
