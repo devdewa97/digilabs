@@ -10,9 +10,6 @@ import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import PortfolioDetail from './components/PortfolioDetail';
 import PortfolioAll from './components/PortfolioAll';
-import Blog from './components/Blog';
-import BlogDetail from './components/BlogDetail';
-import BlogSection from './components/BlogSection';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -23,20 +20,6 @@ function App() {
         <Routes>
           <Route path="/portfolio/:id" element={<PortfolioDetail />} />
           <Route path="/karya-terbaik-kami" element={<PortfolioAll />} />
-          <Route path="/blog" element={
-            <>
-              <Navbar forceWhite={true} />
-              <Blog />
-              <Footer />
-            </>
-          } />
-          <Route path="/blog/:slug" element={
-            <>
-              <Navbar forceWhite={true} />
-              <BlogDetail />
-              <Footer />
-            </>
-          } />
           <Route path="/" element={
             <>
               <Navbar />
@@ -46,7 +29,6 @@ function App() {
                 <Portfolio />
                 <Testimonials />
                 <Pricing />
-                <BlogSection />
                 <CallToAction />
               </main>
               <Footer />
