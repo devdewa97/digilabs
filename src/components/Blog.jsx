@@ -10,6 +10,46 @@ export default function Blog() {
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
 
+  // Update meta tags for Blog page
+  useEffect(() => {
+    const pageTitle = 'Blog & Artikel - Insights Terbaru | Digilabs Kreasi'
+    const pageDescription = 'Temukan insight terbaru tentang pengembangan web, tips bisnis online, dan teknologi digital untuk memperkuat bisnis Anda. Artikel terbaru dari Digilabs Kreasi.'
+    const canonicalUrl = `${SITE_URL}/blog`
+
+    // Update title
+    document.title = pageTitle
+
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]')
+    if (metaDesc) metaDesc.setAttribute('content', pageDescription)
+
+    // Update Open Graph tags
+    const ogTitleTag = document.querySelector('meta[property="og:title"]')
+    const ogDescTag = document.querySelector('meta[property="og:description"]')
+    const ogImageTag = document.querySelector('meta[property="og:image"]')
+    const ogUrlTag = document.querySelector('meta[property="og:url"]')
+
+    if (ogTitleTag) ogTitleTag.setAttribute('content', pageTitle)
+    if (ogDescTag) ogDescTag.setAttribute('content', pageDescription)
+    if (ogImageTag) ogImageTag.setAttribute('content', 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1744975511/OG_Image_Digilabs_2_jpg_f8y4kc.jpg')
+    if (ogUrlTag) ogUrlTag.setAttribute('content', canonicalUrl)
+
+    // Update Twitter cards
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]')
+    const twitterDesc = document.querySelector('meta[name="twitter:description"]')
+    const twitterImage = document.querySelector('meta[name="twitter:image"]')
+    const twitterUrl = document.querySelector('meta[name="twitter:url"]')
+
+    if (twitterTitle) twitterTitle.setAttribute('content', pageTitle)
+    if (twitterDesc) twitterDesc.setAttribute('content', pageDescription)
+    if (twitterImage) twitterImage.setAttribute('content', 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1744975511/OG_Image_Digilabs_2_jpg_f8y4kc.jpg')
+    if (twitterUrl) twitterUrl.setAttribute('content', canonicalUrl)
+
+    // Update canonical URL
+    const canonicalLink = document.querySelector('link[rel="canonical"]')
+    if (canonicalLink) canonicalLink.setAttribute('href', canonicalUrl)
+  }, [])
+
   useEffect(() => {
     client.fetch(`
       *[_type == "post"] | order(publishedAt desc) {
