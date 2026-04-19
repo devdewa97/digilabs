@@ -158,11 +158,11 @@ const PortfolioDetail = () => {
             <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
-                        <a href="#/" className="flex items-center text-gray-600 hover:text-primary transition-colors">
+                        <a href="/karya-terbaik-kami" className="flex items-center text-gray-600 hover:text-primary transition-colors">
                             <ArrowLeft className="w-5 h-5 mr-2" />
                             Kembali
                         </a>
-                        <a href="#/" className="flex items-center">
+                        <a href="/" className="flex items-center">
                             <img
                                 src="https://medivacare.com/wp-content/uploads/2026/04/Logo-Digilabs-Kreasi-Nusantara.png"
                                 alt="PT DigiLabs Kreasi Nusantara"
@@ -181,7 +181,7 @@ const PortfolioDetail = () => {
                     alt={project.title}
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-gray-900/70 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#021e5c]/80 via-[#021e5c]/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
                     <div className="max-w-7xl mx-auto">
                         <motion.div

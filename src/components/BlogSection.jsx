@@ -67,7 +67,7 @@ const BlogSection = () => {
             Blog & Artikel
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Terbaru dari <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">Blog Kami</span>
+            Baru dari <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Blog Kami</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Temukan artikel terbaru tentang pengembangan web, tips SEO, dan strategi digital untuk bisnis Anda
@@ -146,7 +146,7 @@ const BlogSection = () => {
             <div className="text-center">
               <Link
                 to="/blog"
-                className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-full text-white bg-linear-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 hover:shadow-xl transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-full text-white bg-gradient-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 hover:shadow-xl transition-all hover:-translate-y-0.5"
               >
                 Lihat Artikel Lainnya
                 <ArrowRight className="ml-2 h-5 w-5" />

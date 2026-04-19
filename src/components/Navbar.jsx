@@ -44,7 +44,7 @@ const Navbar = ({ forceWhite = false }) => {
     const navLinks = [
         { name: 'Home', section: 'home' },
         { name: 'Services', section: 'services' },
-        { name: 'Portfolio', href: '/karya-terbaik-kami', isRoute: true },
+        { name: 'Portfolio', section: 'portfolio' },
         { name: 'Blog', href: '/blog', isRoute: true },
         { name: 'Pricing', section: 'pricing' },
     ];

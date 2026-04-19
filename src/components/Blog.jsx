@@ -50,16 +50,16 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Modern & Clean */}
-      <section className="bg-linear-to-br from-slate-900 via-gray-900 to-slate-800 pt-32 pb-20">
+      <section className="bg-gradient-to-br from-primary via-blue-700 to-blue-900 pt-32 pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary text-sm font-semibold rounded-full mb-6">
+            <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-sm font-semibold rounded-full mb-6">
               Blog & Artikel
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
               Temukan Insight Terbaru
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">
               Artikel Terbaru tentang pengembangan web, tips bisnis online, dan teknologi digital untuk memperkuat bisnis Anda.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function Blog() {
                 placeholder="Cari artikel..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 text-gray-900 placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
               />
             </div>
           </div>

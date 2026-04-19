@@ -5,7 +5,16 @@
       "Bash(npm run build)",
       "Bash(npx sanity deploy)",
       "Bash(npx sanity api-version show)",
-      "Bash(npx sanity cors list)"
+      "Bash(npx sanity cors list)",
+      "Bash(npm install)",
+      "Bash(timeout 15 npm run dev)",
+      "Bash(timeout 20 npm run dev)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001/)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(taskkill /PID 22228 /F)",
+      "Bash(cmd //c \"taskkill /PID 22228 /F\")",
+      "Bash(timeout 10 npm run dev)"
     ]
   }
 }

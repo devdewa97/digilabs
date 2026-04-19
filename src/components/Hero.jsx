@@ -15,16 +15,16 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="max-w-2xl"
+                        className="max-w-5xl"
                     >
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/50 text-blue-700 font-medium text-sm mb-6 border border-blue-200">
+                        <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-blue-100/50 text-blue-700 font-medium text-sm mb-10 border border-blue-200">
                             <span className="flex h-2 w-2 rounded-full bg-blue-600 mr-2"></span>
                             Layanan Pembuatan Website Terbaik
                         </div>
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                            Solusi Website Profesional untuk Meningkatkan Kredibilitas <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-blue-400">Bisnis Anda</span>
+                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.9] mb-10">
+                            Solusi Website Profesional untuk Meningkatkan Kredibilitas <span className="text-primary">Bisnis Anda</span>
                         </h1>
-                        <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                        <p className="text-lg sm:text-xl text-gray-600 mb-12 leading-[2]">
                             Kami menghadirkan website profesional dengan desain modern, performa cepat, dan pengalaman pengguna yang optimal untuk meningkatkan kredibilitas serta pertumbuhan bisnis Anda.
                         </p>
 
@@ -35,7 +35,7 @@ const Hero = () => {
                                     e.preventDefault();
                                     document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-linear-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 cursor-pointer"
+                                className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-blue-500 hover:from-primary hover:to-blue-600 shadow-lg shadow-blue-500/30 transition-all hover:-translate-y-0.5 cursor-pointer"
                             >
                                 Pesan Sekarang
                                 <ArrowRight className="ml-2 h-5 w-5" />

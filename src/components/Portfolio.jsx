@@ -135,6 +135,9 @@ const Portfolio = () => {
                 <div className="text-center mt-12">
                     <Link
                         to="/karya-terbaik-kami"
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                        }}
                         className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors"
                     >
                         Lihat Semua Portofolio

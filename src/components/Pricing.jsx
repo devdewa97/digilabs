@@ -92,7 +92,7 @@ const Pricing = () => {
                             )}
                             {plan.isPromo && (
                                 <div className="absolute top-0 right-4 -translate-y-1/2">
-                                    <span className="bg-linear-to-r from-orange-500 via-red-500 to-pink-500 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg animate-pulse">
+                                    <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-3 rounded-full shadow-lg animate-pulse">
                                         Promo Terbatas !
                                     </span>
                                 </div>

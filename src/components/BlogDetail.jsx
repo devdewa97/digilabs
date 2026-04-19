@@ -210,11 +210,11 @@ export default function BlogDetail() {
             style={{ backgroundImage: `url(${urlFor(post.featuredImage).width(1920).url()})` }}
           />
         ) : (
-          <div className="absolute inset-0 bg-linear-to-br from-blue-600 to-indigo-700" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary via-blue-700 to-blue-900" />
         )}
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#021e5c]/60 via-[#021e5c]/40 to-transparent" />
 
         {/* Back Link */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 pt-6">
@@ -307,7 +307,7 @@ export default function BlogDetail() {
 
       {/* CTA */}
       <section className="max-w-3xl mx-auto px-4 pb-16">
-        <div className="bg-linear-to-br from-blue-600 to-indigo-700 rounded-xl p-8 text-center">
+        <div className="bg-gradient-to-br from-primary to-blue-700 rounded-xl p-8 text-center">
           <h3 className="text-lg font-bold text-white mb-2">Baca artikel lainnya?</h3>
           <p className="text-blue-100 text-sm mb-5">Temukan lebih banyak artikel menarik di blog kami.</p>
           <Link to="/blog" className="inline-flex items-center px-6 py-2.5 bg-white text-primary text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
