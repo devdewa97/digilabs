@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint ."
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "lint": "eslint .",
+  "postbuild": "react-snap"
   },
   "dependencies": {
     "@sanity/client": "^7.21.0",
@@ -16,7 +17,8 @@
     "lucide-react": "^0.577.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "react-router-dom": "^7.1.0"
+    "react-router-dom": "^7.1.0",
+    "react-snap": "^1.23.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.0",
