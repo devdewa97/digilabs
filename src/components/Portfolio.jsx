@@ -41,11 +41,11 @@ const Portfolio = () => {
             image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1776417500/Digilabs_Kreasi_Nusantara_5_ywri8u.jpg',
         },
         {
-            id: 'restoran-sedap-mantap',
-            title: 'Restoran Sedap Mantap',
-            category: 'UMKM',
-            description: 'Website restoran dengan menu digital dan sistem reservasi meja online.',
-            image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+            id: 'mediva',
+            title: 'Website Klinik Luka Mediva',
+            category: 'Company Profile',
+            description: 'Website klinik berbasis digital yang menyajikan profil dan layanan Klinik Griya Luka Mediva sebuah klinik spesialis yang fokus pada layanan kesehatan dengan berbagai spesialisasi medis. ',
+            image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777343062/Digilabs_Kreasi_Nusantara_6_ovmwdd.jpg',
         },
         {
             id: 'travel-eksplorasi',

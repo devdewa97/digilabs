@@ -45,7 +45,6 @@ const Navbar = ({ forceWhite = false }) => {
         { name: 'Home', section: 'home' },
         { name: 'Services', section: 'services' },
         { name: 'Portfolio', section: 'portfolio' },
-        { name: 'Blog', href: '/blog', isRoute: true },
         { name: 'Pricing', section: 'pricing' },
     ];
 

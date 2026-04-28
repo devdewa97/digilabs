@@ -73,21 +73,16 @@ const PortfolioDetail = () => {
             status: 'Aktif'
         },
         {
-            id: 'restoran-sedap-mantap',
-            title: 'Restoran Sedap Mantap',
-            category: 'UMKM',
+            id: 'mediva',
+            title: 'Website Klinik Luka Mediva',
+            category: 'Company Profile',
             description: 'Website restoran dengan menu digital dan sistem reservasi meja online.',
-            fullDescription: 'Platform digital untuk restoran dengan menu digital interaktif, sistem reservasi meja, dan fitur order delivery.',
-            image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80',
-            screenshots: [
-                'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80',
-                'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=80',
-                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80'
-            ],
-            features: ['Menu Digital', 'Reservasi Meja', 'Order Delivery', 'Gallery', 'Responsive Design'],
-            client: 'Restoran Sedap Mantap',
-            year: '2024',
-            url: 'https://sedapmantap.id',
+            fullDescription: 'Website klinik berbasis digital yang menyajikan profil dan layanan Klinik Griya Luka Mediva sebuah klinik spesialis yang fokus pada layanan kesehatan dengan berbagai spesialisasi medis.',
+            image: 'https://res.cloudinary.com/dmdl9p7do/image/upload/v1777343062/Digilabs_Kreasi_Nusantara_6_ovmwdd.jpg',
+            features: ['Sistem navigasi responsif dengan komponen Navbar modular', 'Widget floating call button dengan konfigurasi terpusat', 'Halaman layanan dengan routing dinamis', 'Struktur kode modular dan scalable', 'Modul reservasi untuk booking kunjungan pasien', 'Clean architecture yang mudah dikembangkan'],
+            client: 'Klinik Griya Luka Mediva',
+            year: '2025',
+            url: 'https://klinikmediva.vercel.app/',
             status: 'Aktif'
         },
         {

@@ -9,6 +9,7 @@ const Pricing = () => {
             price: 'Rp699.000',
             priceBefore: 'Rp1.399.000',
             priceNote: 'Perpanjang Rp400.000/tahun',
+            pricePerPage: 'Add On: Rp80.000 / halaman',
             description: 'Solusi terjangkau untuk bisnis pemula dan personal.',
             features: [
                 'Free Domain .com',
@@ -27,6 +28,7 @@ const Pricing = () => {
             name: 'Business Website',
             price: 'Rp2.499.000',
             priceNote: 'Perpanjang Rp700.000/tahun',
+            pricePerPage: 'Add On: Rp80.000 / halaman',
             description: 'Pilihan ideal untuk perusahaan yang ingin tampil profesional.',
             features: [
                 'Custom Design',
@@ -114,6 +116,11 @@ const Pricing = () => {
                                 {plan.priceNote && (
                                     <p className="text-sm text-gray-500 mt-1">
                                         {plan.priceNote}
+                                    </p>
+                                )}
+                                {plan.pricePerPage && (
+                                    <p className="text-sm text-primary font-medium mt-1">
+                                        {plan.pricePerPage}
                                     </p>
                                 )}
                             </div>
